@@ -1,0 +1,15 @@
+[{ 
+    "username":"testes@gmail.com",
+    "password":"Aa123456",
+    "produto":"ZARA COAT 3"
+},
+{ 
+    "username":"prueba@gmail.com",
+    "password":"12345678",
+    "produto":"matienzo"
+},
+{ 
+    "username":"testes@gmail.com",
+    "password":"Aa123456",
+    "produto":"inexis"
+}]

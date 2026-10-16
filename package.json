@@ -1,0 +1,25 @@
+{
+  "name": "playcurso",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "regression": "npx playwright test",
+    "web": "npx playwright test --grep @web",
+    "api": "npx playwright test --grep @prod",
+    "cucumber": "npx run cucumber.js --retry 1 --format html:./features/cucumber-report/cucumber-report.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "10.9.0",
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.4"
+  },
+  "dependencies": {
+    "allure-playwright": "^3.13.0",
+    "exceljs": "^3.4.0"
+  }
+}
