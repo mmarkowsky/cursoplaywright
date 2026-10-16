@@ -8,7 +8,7 @@
     "regression": "npx playwright test",
     "web": "npx playwright test --grep @web",
     "api": "npx playwright test --grep @prod",
-    "cucumber": "npx run cucumber.js --retry 1 --format html:./features/cucumber-report/cucumber-report.html"
+    "cucumber": "npx run cucumber.js --tags @reg --retry 1 --format html:./features/cucumber-report/cucumber-report.html"
   },
   "keywords": [],
   "author": "",
