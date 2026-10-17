@@ -23,13 +23,14 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npm run cucumber
+      env:
+        SHARD_INDEX: ${{ matrix.shardIndex }}
+        SHARD_TOTAL: ${{ matrix.shardTotal }}
+      run:  npm run cucumber:shard
     - name: Upload Cucumber Report
       uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
-        # O nome do artefato terá o número da máquina (ex: cucumber-report-1, cucumber-report-2)
         name: cucumber-report-shard-${{ matrix.shardIndex }}
-        # Caminho exato onde o seu Cucumber está configurado para salvar o HTML
         path: features/cucumber-report/
         retention-days: 30

@@ -8,7 +8,8 @@
     "regression": "npx playwright test",
     "web": "npx playwright test --grep @web",
     "api": "npx playwright test --grep @prod",
-    "cucumber": "npx cucumber-js --tags @reg --format html:./features/cucumber-report/cucumber-report.html"
+    "cucumber": "npx cucumber-js --tags @reg --format html:./features/cucumber-report/cucumber-report.html",
+    "cucumber:shard": "cucumber-slicer --total $SHARD_TOTAL --index $SHARD_INDEX -- cucumber-js --tags @reg --format html:./features/cucumber-report/cucumber-report.html"
   },
   "keywords": [],
   "author": "",
@@ -22,4 +23,8 @@
     "allure-playwright": "^3.13.0",
     "exceljs": "^3.4.0"
   }
+}
+
+"scripts": {
+  
 }
